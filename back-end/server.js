@@ -65,6 +65,7 @@ app.delete("/pessoa/:idpessoa", pessoa.excluir);
 
 app.get("/livro", livro.listar);
 app.get("/livro/:idlivro", livro.selecionar);
+app.get("/livro/categoria/:idcategoria", livro.listarporcategorias);
 app.post("/livro", livro.criar);
 app.put("/livro/:idlivro", livro.alterar);
 app.delete("/livro/:idlivro", livro.excluir);

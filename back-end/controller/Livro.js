@@ -14,6 +14,13 @@ async function selecionar(req, res) {
         .catch(erro => { res.status(500).json(erro) });
 }
 
+async function listarporcategorias(req, res) {
+  await livro
+      .findAll({ where: {idcategoria: req.params.idcategoria}})
+      .then(resultado => { res.status(200).json(resultado) })
+      .catch(erro => { res.status(500).json(erro) });
+}
+
 async function criar(req, res) {
     if (!req.body.titulo || !req.body.ano || !req.body.paginas || !req.body.edicao || !req.body.idcategoria || !req.body.ideditora)
         res.status(500).send("Parametro titulo, ano, paginas, edicao, ideditora e idcategoria é obrigatório.");
