@@ -15,6 +15,7 @@ import Livro from './paginas/Livro';
 import LivroCadastro from './paginas/LivroCadastro';
 import Emprestar from './paginas/Emprestar';
 import Devolver from './paginas/Devolver';
+import PessoaHistorico from './paginas/PessoaHistorico';
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
             <Route path='/livro/:id' element={<LivroCadastro />} />
             <Route path='/emprestar/:idlivro' element={<Emprestar />} />
             <Route path='emprestimos-pendentes' element={<Devolver />} />
+            <Route path='/historico/pessoa/:id' element={<PessoaHistorico />} />
+
             <Route path='*' element={<Home />} />
           </Routes>
         </BrowserRouter>
