@@ -5,10 +5,10 @@ import Button from "react-bootstrap/esm/Button";
 import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-export default function PessoaHistorico() {
+export default function PessoaHistorico(id) {
     const [dados, setDados] = useState([]);
 
-    const listar = async (idpessoa) => {
+    const listar = async (id) => {
         const { data } = await axios.get('http://localhost:4000/emprestimo/pessoa/'+ id);
         setDados(data);
     };

@@ -1,6 +1,6 @@
 import livro from "../model/LivroModel.js"
-import categoria from "./CategoriaModel.js";
-import editora from "./EditoraModel.js";
+import categoria from "../model/CategoriaModel.js";
+import editora from "../model/EditoraModel.js";
 
 
 async function listar(req, res) {
