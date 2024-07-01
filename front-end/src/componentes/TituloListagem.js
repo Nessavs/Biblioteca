@@ -9,7 +9,7 @@ function TituloListagem(props) {
                 <p>{props.subtitulo}</p>
                 <hr />
                 <div className="d-flex justify-content-end">
-                    <Link to={props.url} className='btn btn-primary'>Adicionar</Link>
+                    <Link to={props.url} className='btn btn-primary'  hidden={props.url == ''} >Adicionar</Link>
                 </div>
             </Alert>
         </>

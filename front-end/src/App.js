@@ -13,6 +13,8 @@ import Pessoa from './paginas/Pessoa';
 import PessoaCadastro from './paginas/PessoaCadastro';
 import Livro from './paginas/Livro';
 import LivroCadastro from './paginas/LivroCadastro';
+import Emprestar from './paginas/Emprestar';
+import Devolver from './paginas/Devolver';
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
             <Route path='/livros' element={<Livro />} />
             <Route path='/livro' element={<LivroCadastro />} />
             <Route path='/livro/:id' element={<LivroCadastro />} />
+            <Route path='/emprestar/:idlivro' element={<Emprestar />} />
+            <Route path='emprestimos-pendentes' element={<Devolver />} />
             <Route path='*' element={<Home />} />
           </Routes>
         </BrowserRouter>

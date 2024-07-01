@@ -12,7 +12,7 @@ function Menu() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/emprestimos">Empréstimos</Nav.Link>
+                        <Nav.Link href="/emprestimos-pendentes">Devolver</Nav.Link>
                         <NavDropdown title="Cadastros" id="basic-nav-dropdown">
                             <NavDropdown.Item href="/pessoas">Pessoas</NavDropdown.Item>
                             <NavDropdown.Item href="/livros">Livros</NavDropdown.Item>
