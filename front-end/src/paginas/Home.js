@@ -40,7 +40,7 @@ export default function Home() {
         { livros.map((l, i) => (
         <Col lg= {4} md={3}>
           <Card>
-            <Card.Img variant="top" src="./livro.png" />
+            <Card.Img variant="top" src="./livros.jpg" />
             <Card.Body>
               <Card.Title>{l.titulo}</Card.Title>
               <Card.Text>
@@ -48,7 +48,7 @@ export default function Home() {
               </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroup.Item>Publicado em {l.ano}o</ListGroup.Item>
+              <ListGroup.Item>Publicado em {l.ano}</ListGroup.Item>
               <ListGroup.Item>Número de páginas {l.paginas}</ListGroup.Item>
               <ListGroup.Item>Edição {l.edicao}</ListGroup.Item>
               <ListGroup.Item>Editora {l.editora.editora}</ListGroup.Item>

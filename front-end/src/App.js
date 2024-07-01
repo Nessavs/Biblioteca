@@ -41,9 +41,8 @@ function App() {
             <Route path='/livro' element={<LivroCadastro />} />
             <Route path='/livro/:id' element={<LivroCadastro />} />
             <Route path='/emprestar/:idlivro' element={<Emprestar />} />
-            <Route path='emprestimos-pendentes' element={<Devolver />} />
+            <Route path='/emprestimos-pendentes' element={<Devolver />} />
             <Route path='/historico/pessoa/:id' element={<PessoaHistorico />} />
-
             <Route path='*' element={<Home />} />
           </Routes>
         </BrowserRouter>

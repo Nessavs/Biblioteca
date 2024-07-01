@@ -30,9 +30,9 @@ export default function Livro() {
                         <th>Titulo</th>
                         <th>Ano</th>
                         <th>Paginas</th>
-                        <th>Edicao</th>
-                        <th>CAtegoria</th>
-                        <th>editora</th>
+                        <th>Edição</th>
+                        <th>Categoria</th>
+                        <th>Editora</th>
 
                     </tr>
                 </thead>
@@ -48,7 +48,7 @@ export default function Livro() {
                             <td>{d.ano}</td>
                             <td>{d.paginas}</td>
                             <td>{d.edicao}</td>
-                            <td>{d.idcategoria} - {d.idcategoria.categoria}</td>
+                            <td>{d.idcategoria} - {d.categoria.categoria}</td>
                             <td>{d.ideditora} - {d.editora.editora}</td>
                         </tr>
                     ))}

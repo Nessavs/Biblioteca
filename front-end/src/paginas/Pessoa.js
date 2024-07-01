@@ -26,6 +26,7 @@ export default function Pessoa() {
         <thead>
           <tr>
             <th>#</th>
+            <th>#</th>
             <th>Código</th>
             <th>Pessoa</th>
             <th>E-mail</th>
@@ -40,7 +41,7 @@ export default function Pessoa() {
                   className='btn btn-primary'>Alterar</Link>
               </td>
               <td>
-                <Link to={'/historico/pessoa' + d.idpessoa}
+                <Link to={'/historico/pessoa/' + d.idpessoa}
                   className='btn btn-primary'>Histórico</Link>
               </td>
               <td>{d.idpessoa}</td>

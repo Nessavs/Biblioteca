@@ -1,15 +1,17 @@
 import TituloListagem from "../componentes/TituloListagem";
 import Table from 'react-bootstrap/Table';
 import { useState, useEffect } from "react";
-import Button from "react-bootstrap/esm/Button";
+//import Button from "react-bootstrap/esm/Button";
 import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-export default function PessoaHistorico(id) {
+export default function PessoaHistorico() {
     const [dados, setDados] = useState([]);
 
-    const listar = async (id) => {
-        const { data } = await axios.get('http://localhost:4000/emprestimo/pessoa/'+ id);
+    const { id } = useParams();
+
+    const listar = async (idpessoa) => {
+        const { data } = await axios.get('http://localhost:4000/emprestimo/pessoa/'+ idpessoa);
         setDados(data);
     };
 
@@ -20,8 +22,8 @@ export default function PessoaHistorico(id) {
     return (
         <>
             <TituloListagem titulo="Listagem do histórico de livros emprestados da pessoa"
-                subtitulo="Neste local você visualiza todos os emprestimos que uma pessoa ja fez."
-                url="/autor" />
+                subtitulo="Neste local você visualiza todos os empréstimos que uma pessoa ja fez."
+                url="/" />
 
             <Table>
                 <thead>

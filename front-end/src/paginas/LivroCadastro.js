@@ -113,7 +113,7 @@ export default function LivroCadastro() {
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Edicao</Form.Label>
+                    <Form.Label>Edição</Form.Label>
                     <Form.Control type="text"
                         value={edicao}
                         onChange={(e) => setEdicao(e.target.value)} />
