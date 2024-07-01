@@ -6,6 +6,7 @@ import editora from "./controller/Editora.js";
 import pessoa from "./controller/Pessoa.js";
 import livro from "./controller/Livro.js";
 import livroautor from "./controller/LivroAutor.js";
+import emprestimo from "./controller/Emprestimo.js";
 import cors from "cors";
 
 try {
@@ -75,5 +76,10 @@ app.get("/livroautor/:idlivroautor", livroautor.selecionar);
 app.post("/livroautor", livroautor.criar);
 app.put("/livroautor/:idlivroautor", livroautor.alterar);
 app.delete("/livroautor/:idlivroautor", livroautor.excluir);
+
+app.post('/emprestar', emprestimo.emprestar);
+app.put('/devolver', emprestimo.devolver);
+app.get('/emprestimo/pendentes', emprestimo.listarpendentes);
+app.get('/emprestimo/pessoa/:idpessoa', emprestimo.listarporpessoa);
 
 app.listen(4000);
