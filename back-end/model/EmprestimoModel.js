@@ -11,11 +11,19 @@ export default banco.define("emprestimo",
         },
         idlivro: {
             type: Sequelize.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references: {
+              model: 'livro',
+              key: 'idlivro'
+            }
         },
         idpessoa: {
             type: Sequelize.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references: {
+              model: 'pessoa',
+              key: 'idpessoa'
+            }
         },
         emprestimo: {
             type: Sequelize.DATE,

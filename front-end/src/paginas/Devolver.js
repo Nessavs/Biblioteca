@@ -52,8 +52,8 @@ export default function Devolver() {
                   className='btn btn-primary'>Devolver</Button>
               </td>
               <td>{d.idemprestimo}</td>
-              <td>{d.idlivro}</td>
-              <td>{d.idpessoa}</td>
+              <td>{d.idlivro} - {d.livro.titulo}</td>
+              <td>{d.idpessoa} - {d.pessoa.pessoa}</td>
               <td>{d.emprestimo}</td>
               <td>{d.vencimento}</td>
             </tr>

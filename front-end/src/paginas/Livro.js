@@ -48,8 +48,8 @@ export default function Livro() {
                             <td>{d.ano}</td>
                             <td>{d.paginas}</td>
                             <td>{d.edicao}</td>
-                            <td>{d.idcategoria}</td>
-                            <td>{d.ideditora}</td>
+                            <td>{d.idcategoria} - {d.idcategoria.categoria}</td>
+                            <td>{d.ideditora} - {d.editora.editora}</td>
                         </tr>
                     ))}
                 </tbody>

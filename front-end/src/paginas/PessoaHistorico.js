@@ -38,7 +38,7 @@ export default function PessoaHistorico() {
                     {dados.map((d, i) => (
                         <tr key={i}>
                             <td>{d.idemprestimo}</td>
-                            <td>{d.idlivro}</td>
+                            <td>{d.idlivro} - {d.livro.titulo}</td>
                             <td>{d.emprestimo}</td>
                             <td>{d.vencimento}</td>
                             <td>{d.devolucao}</td>

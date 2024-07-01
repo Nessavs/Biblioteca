@@ -8,6 +8,7 @@ import livro from "./controller/Livro.js";
 import livroautor from "./controller/LivroAutor.js";
 import emprestimo from "./controller/Emprestimo.js";
 import cors from "cors";
+import "./model/Relacionamentos.js"
 
 try {
     await banco.authenticate();

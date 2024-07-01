@@ -1,8 +1,16 @@
 import livro from "../model/LivroModel.js"
+import categoria from "./CategoriaModel.js";
+import editora from "./EditoraModel.js";
+
 
 async function listar(req, res) {
     await livro
-        .findAll()
+        .findAll({
+          include: [
+            { model: categoria, attributes: ['categoria'], as: 'categoria'},
+            { model: editora, attributes: ['editora'], as: 'editora'}
+          ]
+        })
         .then(resultado => { res.status(200).json(resultado) })
         .catch(erro => { res.status(500).json(erro) });
 }
@@ -16,7 +24,13 @@ async function selecionar(req, res) {
 
 async function listarporcategorias(req, res) {
   await livro
-      .findAll({ where: {idcategoria: req.params.idcategoria}})
+      .findAll({ 
+        include: [
+          { model: categoria, attributes: ['categoria'], as: 'categoria'},
+          { model: editora, attributes: ['editora'], as: 'editora'}
+        ],
+        where: {idcategoria: req.params.idcategoria}
+      })
       .then(resultado => { res.status(200).json(resultado) })
       .catch(erro => { res.status(500).json(erro) });
 }
@@ -74,4 +88,4 @@ async function excluir(req, res) {
         .catch(erro => { res.status(500).json(erro) });
 }
 
-export default { listar, selecionar, criar, alterar, excluir };
+export default { listar, selecionar, listarporcategorias, criar, alterar, excluir };

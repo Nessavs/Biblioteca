@@ -51,7 +51,7 @@ export default function Home() {
               <ListGroup.Item>Publicado em {l.ano}o</ListGroup.Item>
               <ListGroup.Item>Número de páginas {l.paginas}</ListGroup.Item>
               <ListGroup.Item>Edição {l.edicao}</ListGroup.Item>
-              <ListGroup.Item>Editora {l.editora}</ListGroup.Item>
+              <ListGroup.Item>Editora {l.editora.editora}</ListGroup.Item>
             </ListGroup>
             <Card.Body>
               <Link to={'/emprestar/'+ l.idlivro} hidden={l.emprestado}>Emprestar</Link>

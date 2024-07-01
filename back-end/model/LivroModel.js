@@ -32,10 +32,18 @@ export default banco.define("livro",
         idcategoria: {
             type: Sequelize.INTEGER,
             allowNull: false,
+            references: {
+              model: 'categoria',
+              key: 'idcategoria'
+            }
         },
         ideditora: {
             type: Sequelize.INTEGER,
             allowNull: false,
+            references: {
+              model: 'editora',
+              key: 'ideditora'
+            }
         },
         emprestado: {
             type: Sequelize.BOOLEAN,
