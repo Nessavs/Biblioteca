@@ -21,7 +21,7 @@ export default function Devolver() {
       const json = {
         "idemprestimo": idemprestimo
       };
-      await axios.post(`http://localhost:4000/devolver`, json);
+      await axios.put(`http://localhost:4000/devolver`, json);
       listar();
     }
   }
